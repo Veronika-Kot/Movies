@@ -15,7 +15,18 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     var movies:[NSDictionary]?
+  
+
+
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+        
+        return refreshControl
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +36,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         PKHUD.sharedHUD.contentView = PKHUDProgressView()
         PKHUD.sharedHUD.show()
         
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC)))
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()){
-//            PKHUD.sharedHUD.contentView = PKHUDSuccessView()
-            PKHUD.sharedHUD.hide(afterDelay: 1.0)
+
+            PKHUD.sharedHUD.hide(afterDelay: 0.5)
+            
+            self.refreshControl = UIRefreshControl()
+            self.refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
+            
+           self.tableView.addSubview(self.refreshControl)
        }
         
      tableView.dataSource = self
@@ -63,6 +79,28 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
+        
+    }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
+    func onRefresh() {
+        delay(2, closure: {
+            self.refreshControl.endRefreshing()
+        })
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
