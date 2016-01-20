@@ -18,6 +18,7 @@
 		7BA9ED021C407B1700482E2E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA9ED011C407B1700482E2E /* CollectionViewCell.swift */; };
 		7BD27EA81C44AC2400C4F0B9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD27EA71C44AC2400C4F0B9 /* Reachability.m */; };
 		7BD27EB01C44CAE100C4F0B9 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD27EAF1C44CAE100C4F0B9 /* Reach.swift */; };
+		7BD27EB41C4F78E700C4F0B9 /* MoviesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD27EB31C4F78E700C4F0B9 /* MoviesData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7BD27EA71C44AC2400C4F0B9 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7BD27EAE1C44B15A00C4F0B9 /* MoviesViewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoviesViewer-Bridging-Header.h"; sourceTree = "<group>"; };
 		7BD27EAF1C44CAE100C4F0B9 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		7BD27EB31C4F78E700C4F0B9 /* MoviesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesData.swift; sourceTree = "<group>"; };
 		AFAA8D5797A648A3D9C3433A /* Pods-MoviesViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesViewer/Pods-MoviesViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		F9F51DEBE6B247613E8D3779 /* Pods_MoviesViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				7BD27EAE1C44B15A00C4F0B9 /* MoviesViewer-Bridging-Header.h */,
 				7BD27EA61C44AC2400C4F0B9 /* Reachability.h */,
 				7BD27EA71C44AC2400C4F0B9 /* Reachability.m */,
+				7BD27EB31C4F78E700C4F0B9 /* MoviesData.swift */,
 			);
 			path = MoviesViewer;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD27EB41C4F78E700C4F0B9 /* MoviesData.swift in Sources */,
 				7BA9ED021C407B1700482E2E /* CollectionViewCell.swift in Sources */,
 				7BA9ECE41C3F07A700482E2E /* AppDelegate.swift in Sources */,
 				7BA9ECF61C3F085C00482E2E /* MoviesViewController.swift in Sources */,

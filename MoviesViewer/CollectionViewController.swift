@@ -18,7 +18,8 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+//        navigationItem.titleView =
+        
         navigationController!.navigationBar.barTintColor = UIColor(red: 199.0/255.0, green: 50.0/255.0, blue: 112.0/255.0, alpha: 1.0)
         //self.collectionView.backgroundColor = UIColor(red: 245.0/255.0, green: 187.0/255.0, blue: 27.0/255.0, alpha: 1.0)
 
@@ -89,6 +90,10 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     }
 
     
+    @IBAction func didPressMenuButton(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(false, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
