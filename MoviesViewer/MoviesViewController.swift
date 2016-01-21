@@ -15,7 +15,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UITableView!
+   
+    @IBOutlet weak var searchBar: UISearchBar!
         
    
     
@@ -38,7 +39,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         // Do any additional setup after loading the view.
         
         searchBar.delegate = self
-        filteredMovies = movies
+       // filteredMovies = movies
         
         PKHUD.sharedHUD.contentView = PKHUDProgressView()
         PKHUD.sharedHUD.show()
@@ -75,6 +76,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                         data, options:[]) as? NSDictionary {
                             NSLog("response: \(responseDictionary)")
                             self.movies = responseDictionary["results"] as! [NSDictionary]
+                            self.filteredMovies = self.movies
                             self.tableView.reloadData()
                     }
                 }

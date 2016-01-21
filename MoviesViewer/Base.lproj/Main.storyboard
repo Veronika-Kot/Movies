@@ -98,8 +98,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="searchBar" destination="tFz-Ch-pUj" id="9rl-gK-g66"/>
-                        <outlet property="searchDisplayController" destination="9Gi-Xl-Thp" id="5Jm-ls-NDJ"/>
+                        <outlet property="searchBar" destination="tFz-Ch-pUj" id="Kib-Wo-1MT"/>
                         <outlet property="tableView" destination="tFz-Ch-pUj" id="w1n-BT-mez"/>
                     </connections>
                 </viewController>
