@@ -19,6 +19,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
    
     @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBOutlet weak var searchButton: UIBarButtonItem!
         
    
     
@@ -34,6 +35,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         return refreshControl
     }()
     
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +57,12 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             self.refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
             
             self.tableView.addSubview(self.refreshControl)
-        }
+            
+    }
         
         navigationController!.navigationBar.barTintColor = UIColor(red: 199.0/255.0, green: 50.0/255.0, blue: 112.0/255.0, alpha: 0.5)
-        
+        searchBar.barTintColor = UIColor(red: 199.0/255.0, green: 76.0/255.0, blue: 125.0/255.0, alpha: 1)
+        searchBar.tintColor = UIColor.whiteColor()
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -91,6 +95,24 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        searchBar.hidden=true
+    }
+
+    var count = 1
+    @IBAction func buttonClicked(sender: UIButton) {
+        if (count%2 != 0){
+            self.searchBar.hidden=false
+        }else {
+            self.searchBar.hidden=true
+        }
+        count++
+    }
+//    @IBAction func searchButtonTyped(sender: UIBarButtonItem) {
+//        self.searchBar.hidden=false
+//
+//    }
     
     func networkStatusChanged(notification: NSNotification) {
         
@@ -181,9 +203,19 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         print("row\(indexPath.row)")
         return cell
     }
-
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        self.filteredMovies = self.movies
+        self.tableView.reloadData()
+    }
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
     
-
+    
+    
     /*
     // MARK: - Navigation
 

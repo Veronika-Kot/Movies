@@ -17,7 +17,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="561"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="4TO-jL-bRb">
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Movies" id="4TO-jL-bRb">
                                     <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -80,17 +80,31 @@
                             </button>
                         </barButtonItem>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="B7o-v0-3Bf">
-                            <rect key="frame" x="96" y="7" width="128" height="30"/>
+                            <rect key="frame" x="107" y="7" width="106" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="28"/>
                             <state key="normal" title="Movies">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="kfs-8x-rg4">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4gO-A0-A4O">
+                                <rect key="frame" x="279" y="9" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Image-1"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tRe-rT-re3"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="searchButtonTyped:" destination="BYZ-38-t0r" id="Zcu-ns-3JU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="4TO-jL-bRb" id="h0w-i5-FeL"/>
+                        <outlet property="searchButton" destination="kfs-8x-rg4" id="wrZ-Gy-5kH"/>
                         <outlet property="tableView" destination="vyD-Hi-q7D" id="eGM-dD-vIj"/>
                     </connections>
                 </viewController>
@@ -118,7 +132,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="ZZp-41-ypr" customClass="CollectionViewCell" customModule="MoviesViewer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="152" height="219"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="219"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="152" height="219"/>
@@ -215,6 +229,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image-1" width="69" height="69"/>
         <image name="square" width="34" height="34"/>
         <image name="strip" width="69" height="69"/>
     </resources>
