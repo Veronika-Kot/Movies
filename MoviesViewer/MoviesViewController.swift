@@ -98,16 +98,22 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewWillAppear(animated: Bool) {
         searchBar.hidden=true
+        tableView.frame = CGRect(x: 0, y: 0, width: 320, height: 606)
     }
 
-    var count = 1
+   
     @IBAction func buttonClicked(sender: UIButton) {
-        if (count%2 != 0){
+        if  (self.searchBar.hidden == true) {
             self.searchBar.hidden=false
+            tableView.frame = CGRect(x: 0, y: 41, width: 320, height: 606)
         }else {
             self.searchBar.hidden=true
+            tableView.frame = CGRect(x: 0, y: 0, width: 320, height: 606)
+            searchBar.text = ""
+            searchBar.resignFirstResponder()
+            self.filteredMovies = self.movies
+            self.tableView.reloadData()
         }
-        count++
     }
 //    @IBAction func searchButtonTyped(sender: UIBarButtonItem) {
 //        self.searchBar.hidden=false
@@ -193,22 +199,52 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let posterPath = movie["poster_path"] as! String
         
         let baseUrl = "http://image.tmdb.org/t/p/w500"
+//        let imageUrl = NSURL(string: baseUrl + posterPath)
         
-        let imageUrl = NSURL(string: baseUrl + posterPath)
+        let imageRequest = NSURLRequest(URL: NSURL(string: baseUrl + posterPath)!)
+        let placeholderImage = UIImage(named: "placeholder")
         
-        cell.posterView.setImageWithURL(imageUrl!)
+        cell.posterView.setImageWithURLRequest(
+            imageRequest,
+            placeholderImage: placeholderImage,
+            success: { (imageRequest, imageResponse, image) -> Void in
+                
+                
+                // imageResponse will be nil if the image is cached
+                if imageResponse != nil {
+                    print("Image was NOT cached, fade in image")
+                   cell.posterView.alpha = 0.0
+                    cell.posterView.image = image
+                    UIView.animateWithDuration(1.5, animations: { () -> Void in
+                        cell.posterView.alpha = 1.0
+                    })
+                } else {
+                    print("Image was cached so just update the image")
+                   cell.posterView.image = image
+                }
+            },
+            failure: { (imageRequest, imageResponse, error) -> Void in
+                // do something for the failure condition
+        })
+        
+        //cell.posterView.setImageWithURL(imageUrl!)
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
         
         print("row\(indexPath.row)")
         return cell
     }
+    
+    
+    
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.text = ""
         searchBar.resignFirstResponder()
         self.filteredMovies = self.movies
         self.tableView.reloadData()
+        self.searchBar.hidden=true
+        tableView.frame = CGRect(x: 0, y: 0, width: 320, height: 606)
     }
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         self.searchBar.showsCancelButton = true
