@@ -2,7 +2,7 @@
 
 **Movies** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **4.5** hours spent in total
+Time spent: **20** hours spent in total
 
 ## User Stories
 
@@ -18,18 +18,21 @@ The following **optional** features are implemented:
 - [x] User sees an error message when there's a networking error.
 - [x] Movies are displayed using a CollectionView instead of a TableView.
 - [x] User can search for a movie.
-- [ ] All images fade in as they are loading.
+- [x] All images fade in as they are loading.
 - [x] Customize the UI.
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] custom buttons for switching a table view and a collection view (HomeMade)
+- [x] search bar is hidden by default
+- [x] search bar is showen when search button is tapped, and hides back when the button clicken the second time
+- [x] TableView and CollectionView moves up/down when search bar is hiden/shown
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/B6hotRt.gif?1' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/3w1IzjP.gif?1' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
