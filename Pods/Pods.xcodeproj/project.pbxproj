@@ -41,7 +41,6 @@
 		7E6A4EFA32969CDB9F9C57903152BA54 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2B5E013FD1D42752E768761E043FC /* CoreGraphics.framework */; };
 		7F17EA5E2787B6F2BBB359854B42A0E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C31A9B26388001B26382C7C355DA572 /* Foundation.framework */; };
 		81B617F8D26BB10C5726D75E85D21EB7 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C42C0E77C8DA8C6834EF7560D171A20 /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83DB8C566D15E6F89B8060B5B5F06A88 /* Pods-MoviesViewer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E3501B782B52BA81C42EC162B41D7B /* Pods-MoviesViewer-dummy.m */; };
 		92B8C40348475CBA9C8D3272E56A8E44 /* PKHUDTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256309B4807FB93D0F62166190E41577 /* PKHUDTitleView.swift */; };
 		941C3B5A02B19960B8FB3B01D5447693 /* PKHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E67DB16BDE44FD7ACD1A2E200D7EDF1A /* PKHUD-dummy.m */; };
 		9E1E90DED74B73ECE53C9AD76DE53E2D /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 44FD957698DCA48EA02E064D797D048F /* UIImage+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,7 +57,6 @@
 		C2DD28375E1F0B1D0D1D2E4E607C499F /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DE4CE3AEE0E79023FA2975D024F91AA /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6354FEC7728A4C86DAD8092509BA7D4 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 84605BDF334706686862D1F6B74A4028 /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAC483EF637FB4A2C2E2FC75BA631B87 /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B83BECCD070E8E7B315041BD7B1EE1 /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF2A7AA1E1779224CA03A6052342F5D5 /* Pods-MoviesViewer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB50CBD3689B8089F8325AB6560FF7D5 /* Pods-MoviesViewer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CFA8D6B529A0EBFF0316F2629AB2556E /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F2540162F17CC7EA4E919B84E5F9106D /* AFImageDownloader.m */; };
 		D04B84B53456B9CD8A7236126075571B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B240D99C3FC6A7DC6C66A2434CA799 /* MobileCoreServices.framework */; };
 		D8322FFDA236121597EA85067AB5FA6A /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36C9C65891EFBC80B115C860F60D36 /* PKHUDWideBaseView.swift */; };
@@ -98,14 +96,12 @@
 		084134B4D76DF0D3B6527D2FA11B12C8 /* PKHUDTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDTextView.swift; path = PKHUD/PKHUDTextView.swift; sourceTree = "<group>"; };
 		0A4E5728FC0F9248EA92CFEE04D53626 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F1267F9D4607E58EB7CA038167215AA /* PKHUDStatusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDStatusView.swift; path = PKHUD/PKHUDStatusView.swift; sourceTree = "<group>"; };
-		15AA9A269C54418FA4429626F019A9ED /* Pods-MoviesViewer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MoviesViewer-resources.sh"; sourceTree = "<group>"; };
 		1FE1284C17E5A6CCDAEEE26FF70DDBAF /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
 		256309B4807FB93D0F62166190E41577 /* PKHUDTitleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDTitleView.swift; path = PKHUD/PKHUDTitleView.swift; sourceTree = "<group>"; };
 		29FE94753CB775617D6836B02CAF558D /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		2C42C0E77C8DA8C6834EF7560D171A20 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
 		35CE74BF65EE6C59C7B8A9BE90BCDD9E /* WindowRootViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WindowRootViewController.swift; path = PKHUD/WindowRootViewController.swift; sourceTree = "<group>"; };
 		36E78A8D8C8A996E4EDF0A60B43CA3E6 /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = PKHUD/Window.swift; sourceTree = "<group>"; };
-		39BD86DCA74B658E375A7F1D1C5382AD /* Pods-MoviesViewer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MoviesViewer.modulemap"; sourceTree = "<group>"; };
 		40F147B5B4971D4FB52BB15694ED265A /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		44629D450B728BDBB5D3228BEB4FA681 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44FD957698DCA48EA02E064D797D048F /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AFNetworking.h"; path = "UIKit+AFNetworking/UIImage+AFNetworking.h"; sourceTree = "<group>"; };
@@ -113,7 +109,6 @@
 		575639A528FD7CDEA0372C6D9F990EAE /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		57F2B5E013FD1D42752E768761E043FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		5A513A20EA313CF88B63255997DD078C /* PKHUDProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDProgressView.swift; path = PKHUD/PKHUDProgressView.swift; sourceTree = "<group>"; };
-		5AC420F7F81EF6E7FC7E86FA97175F62 /* Pods-MoviesViewer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MoviesViewer-frameworks.sh"; sourceTree = "<group>"; };
 		5B4A7C16D9F6C395E2CFB683C1BC641A /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		5C1E32256AFD28B09696B3E7D4F1EBCC /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
 		5C5852EDEB07441D5756DBF1D8075B53 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -122,7 +117,6 @@
 		6000D1FDF5A0D0E2C004F0AA4DF1A4FD /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
 		692D96431F82F275FC463AF0B5D384E9 /* PKHUDSystemActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSystemActivityIndicatorView.swift; path = PKHUD/PKHUDSystemActivityIndicatorView.swift; sourceTree = "<group>"; };
 		69DD4A4462D570C61D0A93B17134C27B /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
-		6A5D9E15F119D30DB7FE8E0FB50F484E /* Pods-MoviesViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MoviesViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		6BCAC1CC463DA359F13507F588115074 /* PKHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		703A5AB1CFF212FC0D7E4B84D840D61A /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
 		7078B355B5B33DFD4A89C7CABDCD0A18 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
@@ -142,7 +136,6 @@
 		9DC1D44C3905C5D51B68BBDD13DD67F2 /* FrameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameView.swift; path = PKHUD/FrameView.swift; sourceTree = "<group>"; };
 		9F0FC2041294A44BC244AFA98330CD5F /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		9F36C9C65891EFBC80B115C860F60D36 /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDWideBaseView.swift; path = PKHUD/PKHUDWideBaseView.swift; sourceTree = "<group>"; };
-		A018C703EC01F8214214100004D6A74D /* Pods-MoviesViewer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MoviesViewer-acknowledgements.plist"; sourceTree = "<group>"; };
 		A19DF616941A51576DD057A9FD8F4AD8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		A45851499EEC738FE38F57E6D2091453 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5ABDDE717A003F760BC1892EE726239 /* PKHUDImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDImageView.swift; path = PKHUD/PKHUDImageView.swift; sourceTree = "<group>"; };
@@ -156,22 +149,17 @@
 		C08CED80BEA33C06C6ED8A7C0C7D8871 /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
 		C2B240D99C3FC6A7DC6C66A2434CA799 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		C2EFFE7CF4F8EFB349716915FCEC11FF /* PKHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PKHUD.modulemap; sourceTree = "<group>"; };
-		C3E3501B782B52BA81C42EC162B41D7B /* Pods-MoviesViewer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MoviesViewer-dummy.m"; sourceTree = "<group>"; };
 		CA83BEEE9B145AAAED9434651810F7F0 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
 		CCAC817B638240DA953A7F94C5B3AA8D /* PKHUDAssets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAssets.swift; path = PKHUD/PKHUDAssets.swift; sourceTree = "<group>"; };
-		CD00AF332D5BFB86EE7D90F0D8E1E4A7 /* Pods-MoviesViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MoviesViewer.release.xcconfig"; sourceTree = "<group>"; };
 		D1C3A134D5420663791AA2331CBCFB1F /* PKHUDErrorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDErrorView.swift; path = PKHUD/PKHUDErrorView.swift; sourceTree = "<group>"; };
-		D23C3F2430B4BA9CE9E476C2D1F29E39 /* Pods-MoviesViewer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MoviesViewer-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D54EB8B1CE1C0DE403DBD8EF8CA1C2D6 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		D6FADDACFB5CDBEE2A15D8A8AE1D11CF /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AFNetworking.modulemap; sourceTree = "<group>"; };
-		DB50CBD3689B8089F8325AB6560FF7D5 /* Pods-MoviesViewer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MoviesViewer-umbrella.h"; sourceTree = "<group>"; };
 		DC17CD9C13C1848E0EA094B11BF50110 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		E67DB16BDE44FD7ACD1A2E200D7EDF1A /* PKHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKHUD-dummy.m"; sourceTree = "<group>"; };
 		E9518E6039660F28F3BF00DA4BE55BA6 /* PKHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUD.swift; path = PKHUD/PKHUD.swift; sourceTree = "<group>"; };
 		EECBAA952A232FB0E0D7CF27DF4A1FE0 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		F01670216F8C196DBCF461E0E88B1A88 /* PKHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKHUD.h; path = PKHUD/PKHUD.h; sourceTree = "<group>"; };
 		F2540162F17CC7EA4E919B84E5F9106D /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
-		F39A65F5F052E395E65F8CAB3A4502FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA5B2BD615D940DF470260569F16F47C /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
 		FA6CC1E53692B5059585A20FCB36A0A4 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		FC1F21F148AA4747372AF02D84BF5513 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -269,7 +257,6 @@
 				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
 				E6FAC1D288CE100922ECC5EC0E3D9F2A /* Pods */,
 				236B0BD5304F2268F421C6F4738B9589 /* Products */,
-				C9B3087D2C2FAB8F6B3820802B997088 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,24 +272,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/AFNetworking";
-			sourceTree = "<group>";
-		};
-		9DE551952503B7FA0A1956D27983CEBA /* Pods-MoviesViewer */ = {
-			isa = PBXGroup;
-			children = (
-				F39A65F5F052E395E65F8CAB3A4502FF /* Info.plist */,
-				39BD86DCA74B658E375A7F1D1C5382AD /* Pods-MoviesViewer.modulemap */,
-				D23C3F2430B4BA9CE9E476C2D1F29E39 /* Pods-MoviesViewer-acknowledgements.markdown */,
-				A018C703EC01F8214214100004D6A74D /* Pods-MoviesViewer-acknowledgements.plist */,
-				C3E3501B782B52BA81C42EC162B41D7B /* Pods-MoviesViewer-dummy.m */,
-				5AC420F7F81EF6E7FC7E86FA97175F62 /* Pods-MoviesViewer-frameworks.sh */,
-				15AA9A269C54418FA4429626F019A9ED /* Pods-MoviesViewer-resources.sh */,
-				DB50CBD3689B8089F8325AB6560FF7D5 /* Pods-MoviesViewer-umbrella.h */,
-				6A5D9E15F119D30DB7FE8E0FB50F484E /* Pods-MoviesViewer.debug.xcconfig */,
-				CD00AF332D5BFB86EE7D90F0D8E1E4A7 /* Pods-MoviesViewer.release.xcconfig */,
-			);
-			name = "Pods-MoviesViewer";
-			path = "Target Support Files/Pods-MoviesViewer";
 			sourceTree = "<group>";
 		};
 		B099EA8AB296DD4668D51500E3DCD5A0 /* Support Files */ = {
@@ -344,14 +313,6 @@
 				B099EA8AB296DD4668D51500E3DCD5A0 /* Support Files */,
 			);
 			path = PKHUD;
-			sourceTree = "<group>";
-		};
-		C9B3087D2C2FAB8F6B3820802B997088 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9DE551952503B7FA0A1956D27983CEBA /* Pods-MoviesViewer */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		D600439FBBE5E2C8AFE9B39C2DB0B874 /* NSURLSession */ = {
@@ -471,7 +432,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF2A7AA1E1779224CA03A6052342F5D5 /* Pods-MoviesViewer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,7 +536,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83DB8C566D15E6F89B8060B5B5F06A88 /* Pods-MoviesViewer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,7 +662,6 @@
 		};
 		48DF8C128C35C94FA9B6E4B5407D5F33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD00AF332D5BFB86EE7D90F0D8E1E4A7 /* Pods-MoviesViewer.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -772,7 +730,6 @@
 		};
 		A6241526D3A764A6FE2CA9B917D9D0E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A5D9E15F119D30DB7FE8E0FB50F484E /* Pods-MoviesViewer.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;

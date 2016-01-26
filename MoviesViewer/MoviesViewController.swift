@@ -21,12 +21,13 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var searchButton: UIBarButtonItem!
         
+    
    
     
     //@IBOutlet weak var scrollView: UIScrollView!
     var movies:[NSDictionary]?
     var filteredMovies : [NSDictionary]?
-    
+    var endpoint: String!
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -60,14 +61,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             
     }
         
-        navigationController!.navigationBar.barTintColor = UIColor(red: 199.0/255.0, green: 50.0/255.0, blue: 112.0/255.0, alpha: 0.5)
+   //     navigationController!.navigationBar.barTintColor = UIColor(red: 199.0/255.0, green: 50.0/255.0, blue: 112.0/255.0, alpha: 0.5)
         searchBar.barTintColor = UIColor(red: 199.0/255.0, green: 76.0/255.0, blue: 125.0/255.0, alpha: 1)
         searchBar.tintColor = UIColor.whiteColor()
         tableView.dataSource = self
         tableView.delegate = self
         
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = NSURL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
+        let url = NSURL(string:"https://api.themoviedb.org/3/movie/\(endpoint)?api_key=\(apiKey)")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession(
             configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
@@ -82,6 +83,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                         data, options:[]) as? NSDictionary {
                             NSLog("response: \(responseDictionary)")
                             self.movies = responseDictionary["results"] as! [NSDictionary]
+                            
                             self.filteredMovies = self.movies
                             self.tableView.reloadData()
                     }
@@ -92,12 +94,20 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("networkStatusChanged:"), name: ReachabilityStatusChangedNotification, object: nil)
         Reach().monitorReachabilityChanges()
     
-    
-    
+        let cell : MovieCell
+        
+//        tableView.rowHeight = CGSizeMake(<#T##width: CGFloat##CGFloat#>, <#T##height: CGFloat##CGFloat#>)
+        //(width: cell.frame.size.width, height: cell.frame.size.height)
     }
     
     override func viewWillAppear(animated: Bool) {
         searchBar.hidden=true
+//        self.searchBar.text = ""
+//        self.searchBar.resignFirstResponder()
+//        
+//        self.filteredMovies = self.movies
+        self.tableView.reloadData()
+
         tableView.frame = CGRect(x: 0, y: 0, width: 320, height: 606)
     }
 
@@ -115,6 +125,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             self.tableView.reloadData()
         }
     }
+    
 //    @IBAction func searchButtonTyped(sender: UIBarButtonItem) {
 //        self.searchBar.hidden=false
 //
@@ -230,6 +241,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         //cell.posterView.setImageWithURL(imageUrl!)
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
+        //cell.titleLabel.sizeToFit()
+        cell.overviewLabel.sizeToFit()
         
         print("row\(indexPath.row)")
         return cell
@@ -252,14 +265,27 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "detail" {
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            //let movie = movies![indexPath!.row]
+            let movie = filteredMovies![indexPath!.row]
+            let detailViewController = segue.destinationViewController as! DetailViewController
+            detailViewController.movie = movie
+            print("Prepare for segue")
+        } else if segue.identifier == "collection" {
+            let collectionViewController = segue.destinationViewController as! UINavigationController
+        }
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
