@@ -21,6 +21,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     var movies:[NSDictionary]?
     var filteredMovies : [NSDictionary]?
+    var endpoint: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
