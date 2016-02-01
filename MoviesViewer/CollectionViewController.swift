@@ -21,11 +21,14 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     var movies:[NSDictionary]?
     var filteredMovies : [NSDictionary]?
+    var endpoint : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         
+        let image = UIImage(named: "square")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: nil)
 //        navigationItem.titleView =
         
         navigationController!.navigationBar.barTintColor = UIColor(red: 199.0/255.0, green: 50.0/255.0, blue: 112.0/255.0, alpha: 1.0)
@@ -156,11 +159,11 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     }
 
     
-    @IBAction func didPressMenuButton(sender: AnyObject) {
-        
-        dismissViewControllerAnimated(false, completion: nil)
-    }
-    
+//    @IBAction func didPressMenuButton(sender: AnyObject) {
+//        
+//        dismissViewControllerAnimated(false, completion: nil)
+//    }
+//    
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.text = ""
@@ -175,14 +178,23 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     }
 
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPathForCell(cell)
+        //let movie = movies![indexPath!.row]
+        let movie = filteredMovies![indexPath!.row]
+        let detailViewController = segue.destinationViewController as! DetailViewController
+        detailViewController.movie = movie
+        print("Prepare for segue")
+
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

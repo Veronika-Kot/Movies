@@ -38,7 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         topRatedViewController.endpoint = "top_rated"
         topRatedNavigationController.tabBarItem.title = "Top Rated"
         topRatedNavigationController.tabBarItem.image = UIImage(named: "top_rated")
-        UITabBar.appearance().tintColor = UIColor(red: 78.0/255.0, green: 137.0/255.0, blue: 245.0/255.0, alpha: 1)
+//   blue color     UITabBar.appearance().tintColor = UIColor(red: 78.0/255.0, green: 137.0/255.0, blue: 245.0/255.0, alpha: 1)
+        
+         UITabBar.appearance().tintColor = UIColor(red: 199.0/255.0, green: 80.0/255.0, blue: 123.0/255.0, alpha: 1)
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [nowPlayingNavigationController, topRatedNavigationController]
