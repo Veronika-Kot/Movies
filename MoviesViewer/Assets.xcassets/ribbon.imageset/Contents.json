@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "popcorn.png",
+      "filename" : "ribbon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "popcorn-1.png",
+      "filename" : "ribbon-1.png",
       "scale" : "2x"
     },
     {
