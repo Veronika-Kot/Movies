@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nowPlayingViewController = nowPlayingNavigationController.topViewController as! MoviesViewController
         
         nowPlayingNavigationController.navigationBar.barTintColor = UIColor(red: 199.0/255.0, green: 50.0/255.0, blue: 112.0/255.0, alpha: 0.5)
+        
         nowPlayingViewController.endpoint = "now_playing"
         nowPlayingNavigationController.tabBarItem.title = "Now Playing"
         nowPlayingNavigationController.tabBarItem.image = UIImage(named: "now_playing")
@@ -37,50 +38,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         topRatedViewController.endpoint = "top_rated"
         topRatedNavigationController.tabBarItem.title = "Top Rated"
         topRatedNavigationController.tabBarItem.image = UIImage(named: "top_rated")
-        UITabBar.appearance().tintColor = UIColor(red: 78.0/255.0, green: 137.0/255.0, blue: 245.0/255.0, alpha: 1)
+//   blue color     UITabBar.appearance().tintColor = UIColor(red: 78.0/255.0, green: 137.0/255.0, blue: 245.0/255.0, alpha: 1)
         
+         UITabBar.appearance().tintColor = UIColor(red: 199.0/255.0, green: 80.0/255.0, blue: 123.0/255.0, alpha: 1)
         
-        //=================================
-        
-//        let nowPlayingNavigationControllerCol =
-//        storyboard.instantiateViewControllerWithIdentifier("CollectionNavigationController") as! UINavigationController
-//        
-//        let nowPlayingViewControllerCol = nowPlayingNavigationControllerCol.topViewController as! CollectionViewController
-//        
-//        nowPlayingNavigationControllerCol.navigationBar.barTintColor = UIColor(red: 199.0/255.0, green: 50.0/255.0, blue: 112.0/255.0, alpha: 0.5)
-//        nowPlayingViewControllerCol.endpoint = "now_playing"
-//        nowPlayingNavigationControllerCol.tabBarItem.title = "Now Playing"
-//        nowPlayingNavigationControllerCol.tabBarItem.image = UIImage(named: "now_playing")
-//        
-//        let topRatedNavigationControllerCol = storyboard.instantiateViewControllerWithIdentifier("CollectionNavigationController") as! UINavigationController
-//        let topRatedViewControllerCol = topRatedNavigationControllerCol.topViewController as! CollectionViewController
-//        topRatedNavigationControllerCol.navigationBar.barTintColor = UIColor(red: 199.0/255.0, green: 50.0/255.0, blue: 112.0/255.0, alpha: 0.5)
-//        
-//        topRatedViewControllerCol.endpoint = "top_rated"
-//        topRatedNavigationControllerCol.tabBarItem.title = "Top Rated"
-//        topRatedNavigationControllerCol.tabBarItem.image = UIImage(named: "top_rated")
-//        UITabBar.appearance().tintColor = UIColor(red: 78.0/255.0, green: 137.0/255.0, blue: 245.0/255.0, alpha: 1)
-
-        
-        //UITabBar.appearance().tintColor = UIColor(red: 199.0/255.0, green: 50.0/255.0, blue: 112.0/255.0, alpha: 0.5)
         let tabBarController = UITabBarController()
-        
         tabBarController.viewControllers = [nowPlayingNavigationController, topRatedNavigationController]
-//        nowPlayingNavigationController.tabBarController.barTintColor = UIColor.whiteColor()
-        UITabBar.appearance().barTintColor = UIColor.whiteColor()
         
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
-        
-//        let tabBarControllerCol = UITabBarController()
-//        
-//        tabBarControllerCol.viewControllers = [nowPlayingNavigationControllerCol, topRatedNavigationControllerCol]
-//        //        nowPlayingNavigationController.tabBarController.barTintColor = UIColor.whiteColor()
-//        UITabBar.appearance().barTintColor = UIColor.whiteColor()
-//        
-//        window?.rootViewController = tabBarController
-//        window?.makeKeyAndVisible()
-
         
         // Override point for customization after application launch.
         return true

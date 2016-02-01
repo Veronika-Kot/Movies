@@ -41,10 +41,17 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let image = UIImage(named: "strip")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        //self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        
         // Do any additional setup after loading the view.
         
         searchBar.delegate = self
        // filteredMovies = movies
+        
+//        tableView.estimatedRowHeight = 100
+//        tableView.rowHeight = UITableViewAutomaticDimension
         
         PKHUD.sharedHUD.contentView = PKHUDProgressView()
         PKHUD.sharedHUD.show()
@@ -241,14 +248,28 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         //cell.posterView.setImageWithURL(imageUrl!)
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
-        //cell.titleLabel.sizeToFit()
         cell.overviewLabel.sizeToFit()
+        
+        if(cell.selected){
+           cell.titleLabel.tintColor = UIColor(red: 199.0/255.0, green: 76.0/255.0, blue: 125.0/255.0, alpha: 1)
+        }
+//        else{
+//            cell.backgroundColor = UIColor.clearColor()
+//        }
         
         print("row\(indexPath.row)")
         return cell
     }
     
+    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = UIColor(red: 199.0/255.0, green: 76.0/255.0, blue: 125.0/255.0, alpha: 1)
+        }
     
+    func tableView(lableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
+    }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
@@ -280,7 +301,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             detailViewController.movie = movie
             print("Prepare for segue")
         } else if segue.identifier == "collection" {
-            let collectionViewController = segue.destinationViewController as! UINavigationController
+            let collectionViewController = segue.destinationViewController as! CollectionViewController
         }
         
         // Get the new view controller using segue.destinationViewController.
